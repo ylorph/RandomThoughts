@@ -1,5 +1,11 @@
 # RandomThoughts
-Some Random Thoughts I have unordered , unclassified , unfinished
+Some Random Thoughts I have
+* unordered
+* unclassified
+* unfinished
+
+This is just a way for me to keep a trace of them
+
 
 
 
