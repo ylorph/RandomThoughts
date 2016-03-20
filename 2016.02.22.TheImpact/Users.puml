@@ -1,0 +1,137 @@
+@startuml TheSystem.01.Ideal.png
+left to right direction
+skinparam {
+  handwritten true
+  ActorFontName Segoe Script
+  RectangleFontName Segoe Script
+  TitleFontName Segoe Script
+  NoteFontName Segoe Script
+}
+title The Ideal World
+
+actor User
+actor Customer
+rectangle "The System"  as TheSystem {
+}
+User -- TheSystem
+TheSystem -- Customer
+
+note "this is perfectly implemented" as PerfectNote
+note "I'm happy" as HappyNote
+User .. HappyNote
+Customer .. HappyNote
+PerfectNote .. TheSystem
+
+footer
+Copyright (c) 2016 @ylorph
+licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+http://creativecommons.org/licenses/by-sa/4.0/
+endfooter
+@enduml
+
+@startuml TheSystem.02.ImplicitUsers.png
+left to right direction
+skinparam {
+  handwritten true
+  ActorFontName Segoe Script
+  RectangleFontName Segoe Script
+  TitleFontName Segoe Script
+  NoteFontName Segoe Script
+}
+title The Ideal World\nWith The Implicit Users
+rectangle "The System"  as TheSystem {
+}
+rectangle "The Explicit Users" as TheExplicits {
+  actor User
+  actor Customer
+}
+rectangle "The Implicit Users" as TheImplicits {
+  actor Operations
+  actor Helpdesk
+  actor :Future Dev: as Dev
+}
+TheSystem -- TheImplicits
+TheExplicits -- TheSystem
+
+note "Any of them\n might be you" as noteImplicits
+noteImplicits .. TheImplicits
+
+
+footer
+Copyright (c) 2016 @ylorph
+licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+http://creativecommons.org/licenses/by-sa/4.0/
+endfooter
+@enduml
+
+@startuml TheSystem.03.WhenThingGoWrong.png
+left to right direction
+skinparam {
+  handwritten true
+  ActorFontName Segoe Script
+  RectangleFontName Segoe Script
+  TitleFontName Segoe Script
+  NoteFontName Segoe Script
+}
+title The World\n When Things Go Wrong\n Even More implicits Users impacted
+
+
+
+rectangle "The System"  as TheSystem {
+}
+rectangle "Users" as TheExplicits <<Explicit>>{
+  actor User
+  actor Customer
+}
+rectangle "Users" as TheImplicits <<Implicit>>{
+  actor Operations
+  actor Helpdesk
+  actor :Future Dev: as Dev
+}
+TheExplicits - TheSystem
+TheSystem - TheImplicits
+
+note "Any of them\n might be you" as noteImplicits
+noteImplicits .. TheImplicits
+
+rectangle "Family of" as TheFamily <<Implicit>> {
+  actor :Future Dev: as DevFamily
+  actor :Operations: as OpsFamily
+  actor :User: as UserFamily
+  actor :Customer: as CustomerFamily
+  actor :Helpdesk: as HelpdeskFamily
+}
+rectangle "Friends of" as TheFriends <<Implicit>> {
+  actor :Future Dev: as DevFriend
+  actor :Operations: as OpsFriend
+  actor :User: as UserFriend
+  actor :Customer: as CustomerFriend
+  actor :Helpdesk: as HelpdeskFriend
+}
+
+'rectangle " Bosses"  as TheBosses <<Implicit>> {
+'  actor :Future Dev's: as DevBoss
+'  actor :Operations's: as OpsBoss
+'  actor :Helpdesk's: as HelpdeskBoss
+'  actor :User's: as UserBoss
+'  actor :Customer's: as CustomerBoss
+'}
+
+
+
+note "The things going wrong\n in the system we delivered have \nan impact on those <b>as well</b>" as noteWrong
+noteWrong . TheFriends
+TheFamily . noteWrong
+'noteWrong .. TheBosses
+
+'TheBosses -right-> TheFriends     : theirs too
+'TheBosses -left-> TheFamily : theirs too
+
+
+
+footer
+Copyright (c) 2016 @ylorph
+licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+http://creativecommons.org/licenses/by-sa/4.0/
+endfooter
+@enduml
