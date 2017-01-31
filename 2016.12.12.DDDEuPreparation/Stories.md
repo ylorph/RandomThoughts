@@ -1,4 +1,4 @@
-﻿* messaging for the Middleman -- not all of us are doing 10^12 msg/Sec
+﻿* Let's Fail -- not all of us are doing 10^12 msg/Sec
 * who am I
 
 * Intro
@@ -9,8 +9,6 @@
 
 * Are all messages equal ?
 * Are all messages of the same type equal ?
-* let's use some code to ask ourselves what all those tooling are doing &
- the trade-
 * Soa, µSvc, integration all needs messaging of some sort,
 but since it's considered obvious (Cynefin) & supporting context (DDD),we can easily fall into Chaos (Cynefin)
 
@@ -42,7 +40,7 @@ but since it's considered obvious (Cynefin) & supporting context (DDD),we can ea
 
 * Mention Talks
   * Greg Young: "Stop Over-Engineering"  
-  * Greg Young: "Production issues", "Production Lessons" 
+  * Greg Young: "Production issues", "Production Lessons"
   * Ali Kheyrollahi: "5 must-have patterns for your web-scale Microservices."  
   * Ali Kheyrollahi: "From hard science to baseless opinions: where did we go wrong?"  
 
