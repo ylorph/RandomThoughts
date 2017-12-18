@@ -1,0 +1,6 @@
+# System Projections of GetEventStore
+
+* $by-category        -> $ce-{category}    
+* $by-event-tpe       -> $et-{event-type}  
+* $stream-by-category -> $categeory-{category} -> $@ contains the event that creates the category   
+* $streams            ->   
